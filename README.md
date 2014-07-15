@@ -1,10 +1,7 @@
 Hanvon tablet driver
 ====================
 
-Driver for Linux kernels which supports complete functionality of the tablet:
-
-pen coordinates, touch/float/click detection, pressure, x and y tilt, pen
-button. 
+Driver for Linux kernels which supports complete functionality of the tablet: pen coordinates, touch/float/click detection, pressure, x and y tilt, pen button.
 
 On Artmaster I four simple tablet buttons (note that the first
 one works only together with pen activity), and the slider button.
@@ -20,9 +17,7 @@ Supported hardware
 Installation
 ============
 
-Type `make` to compile the module. New file **hanvon.ko** will be produced
-
-in current directory. Load the module with root permissions
+Type `make` to compile the module. New file **hanvon.ko** will be produced in current directory. Load the module with root permissions
 
 <code>
 insmod ./hanvon.ko
@@ -34,12 +29,11 @@ If everything goes right the tablet should start working immediately.
 Diagnostics
 ===========
 
-After insmod, check with dmesg, if the module was loaded properly.
+After insmod, check with dmesg, if the module was loaded properly. "USB Hanvon tablet driver" should appear in the listing. lsmod should also contain hanvon in its listing: 
 
-"USB Hanvon tablet driver" should appear in the listing.
-
-lsmod should also contain hanvon in its listing: `lsmod | grep hanvon`
-
+<code>
+lsmod | grep hanvon
+</code>
 
 Revision history
 ================
