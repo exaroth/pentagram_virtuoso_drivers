@@ -12,6 +12,7 @@ Supported hardware
 
 Artmaster I: AM0806, AM1107, AM1209
 Rollick: RL0604
+添加了 RK0504 的支持。原驅動在 Debian 7.6(Linux 3.2.0-amd64) 下無法運作。
 
 
 Installation
@@ -44,3 +45,4 @@ Revision history
  0.3c - patch for AM1107 from Daniel Koch applied
  0.3d - support for right side buttons of AM1107 and AM1209
   0.4 - code cleanup, RL0604 patch from Daniel Clemmer
+  0.4a - 添加了 RK0504 的支持 by 宅醬
