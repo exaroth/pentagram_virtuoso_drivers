@@ -10,8 +10,9 @@ one works only together with pen activity), and the slider button.
 Supported hardware
 ==================
 
-+ Artmaster I: AM0806, AM1107, AM1209
-+ Rollick: RL0604
+Artmaster I: AM0806, AM1107, AM1209
+Rollick: RL0604, RK0504
+添加了 RK0504 的支持。原驅動在 Debian 7.6(Linux 3.2.0-amd64) 下無法運作。
 
 
 Installation
@@ -38,10 +39,12 @@ lsmod | grep hanvon
 Revision history
 ================
 
-+ 0.0.1 - initial release
-+ 0.2 - corrected pressure detection, working slider button
-+ 0.3 - remaining buttons also working, added x and y tilting
-+ 0.3b - patch for AM1209 from Markus Zucker applied
-+ 0.3c - patch for AM1107 from Daniel Koch applied
-+ 0.3d - support for right side buttons of AM1107 and AM1209
-+ 0.4 - code cleanup, RL0604 patch from Daniel Clemmer
+0.0.1 - initial release
+  0.2 - corrected pressure detection, working slider button
+  0.3 - remaining buttons also working, added x and y tilting
+ 0.3b - patch for AM1209 from Markus Zucker applied
+ 0.3c - patch for AM1107 from Daniel Koch applied
+ 0.3d - support for right side buttons of AM1107 and AM1209
+  0.4 - code cleanup, RL0604 patch from Daniel Clemmer
+  0.4a - supported RK0504 by otakuchiyan
+  0.4b - support Linux 3.17.6 by otakuchiyan
