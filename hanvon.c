@@ -19,6 +19,7 @@ MODULE_LICENSE(DRIVER_LICENSE);
 #define USB_PRODUCT_ID_AM1107	0x8505
 #define USB_PRODUCT_ID_AM1209	0x8501
 #define USB_PRODUCT_ID_RL0604	0x851f
+#define USB_PRODUCT_ID_RK0504   0x851d
 #define USB_AM_PACKET_LEN	10
 
 static int lbuttons[]={BTN_0,BTN_1,BTN_2,BTN_3};	/* reported on all AMs */
@@ -76,10 +77,10 @@ static void hanvon_irq(struct urb *urb)
 		case -ENOENT:
 		case -ESHUTDOWN:
 			/* this urb is terminated, clean up */
-			dbg("%s - urb shutting down with status: %d", __func__, urb->status);
+			//dbg("%s - urb shutting down with status: %d", __func__, urb->status);
 			return;
 		default:
-			dbg("%s - nonzero urb status received: %d", __func__, urb->status);
+			//dbg("%s - nonzero urb status received: %d", __func__, urb->status);
 			goto exit;
 	}
 
@@ -111,8 +112,8 @@ static void hanvon_irq(struct urb *urb)
 
 exit:
 	retval = usb_submit_urb (urb, GFP_ATOMIC);
-	if (retval)
-		err("%s - usb_submit_urb failed with result %d", __func__, retval);
+//	if (retval)
+		//err("%s - usb_submit_urb failed with result %d", __func__, retval);
 }
 
 static struct usb_device_id hanvon_ids[] = {
@@ -120,7 +121,8 @@ static struct usb_device_id hanvon_ids[] = {
 	{ USB_DEVICE(USB_VENDOR_ID_HANVON, USB_PRODUCT_ID_AM1107) },
 	{ USB_DEVICE(USB_VENDOR_ID_HANVON, USB_PRODUCT_ID_AM0806) },
 	{ USB_DEVICE(USB_VENDOR_ID_HANVON, USB_PRODUCT_ID_RL0604) },
-	{ }
+	{ USB_DEVICE(USB_VENDOR_ID_HANVON, USB_PRODUCT_ID_RK0504) },
+    { }
 };
 
 MODULE_DEVICE_TABLE(usb, hanvon_ids);
